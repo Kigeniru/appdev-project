@@ -1,0 +1,88 @@
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">About Our Cheesecake Bakery</h1>
+      <p class="hero-subtitle">Crafting Heavenly Desserts with Love and Premium Ingredients</p>
+    </div>
+  </div>
+</section>
+
+<!-- Story Section -->
+<section class="story">
+  <div class="container">
+    <div class="story-content">
+      <div class="story-image">
+        <div class ="image-placeholder">
+        <img src="assets/main_logo.png" alt="YourBrand Featured" class="product-img">
+        </div>
+      </div>
+      <div class="story-text">
+        <h2 class="section-title">Our Story</h2>
+        <p class="story-description">
+          Our cheesecake journey began with a simple yet powerful passion: creating the perfect dessert 
+          that combines creamy richness with a golden, buttery crust. Founded in 2020 by Amythel Mediavillo, 
+          a baking enthusiast who struggled to find cheesecakes that matched the quality of her grandmother's 
+          legendary recipe.
+        </p>
+        <p class="story-description">
+          After years of perfecting recipes and experimenting with different techniques, Amythel realized 
+          there was a gap in the market. Why should dessert lovers have to choose between flavor and texture? 
+          Why not have both in one perfect slice?
+        </p>
+        <p class="story-description">
+          Today, we're proud to be a local bakery specializing in artisanal cheesecakes, helping thousands 
+          of dessert lovers discover the perfect blend of creamy filling and golden crust in every bite.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="mission">
+  <div class="container">
+    <div class="mission-content">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="mission-text">
+        To bring joy to every dessert lover by providing high-quality, artisanal cheesecakes 
+        that celebrate the perfect balance of creamy richness and golden crust. We believe 
+        that every slice should be a moment of pure indulgence, crafted with premium ingredients 
+        and baked with love.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let value of values">
+        <div class="value-icon" [innerHTML]="value.icon"></div>
+        <h3 class="value-title">{{ value.title }}</h3>
+        <p class="value-description">{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
+<!-- CTA Section -->
+<section class="about-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Join Our Cheesecake Family</h2>
+      <p class="cta-description">
+        Discover cheesecakes that celebrate the perfect balance of flavor and texture, and join thousands 
+        of dessert lovers who have found their perfect slice with us.
+      </p>
+      <div class="cta-actions">
+        <a routerLink="/products" class="btn btn-primary">Explore Products</a>
+        <a routerLink="/support" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>

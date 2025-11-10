@@ -1,0 +1,132 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="assets/main_logo.png" alt="YourBrand Featured" class="product-img">
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Indulge in
+          <span class="hero-highlight">The Cheese Crave</span>
+        </h1>
+        <p class="hero-description">
+          Experience the perfect blend of creamy richness and golden crust with our artisanal cheesecakes, 
+          handcrafted daily with premium ingredients for the ultimate dessert experience.
+        </p>
+        <div class="hero-actions">
+          <a routerLink="/products" class="btn btn-primary">Shop Now</a>
+          <a routerLink="/about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+            <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Artisan Crafted</h3>
+        <p class="feature-description">Each cheesecake is handcrafted with premium ingredients and traditional baking techniques</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Fresh Daily</h3>
+        <p class="feature-description">Baked fresh daily with the finest ingredients for perfect texture and flavor</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Quality</h3>
+        <p class="feature-description">Only the finest cream cheese, fresh ingredients, and golden crust for every slice</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="featured-products">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Featured Cheesecakes</h2>
+      <p class="section-description">Discover our best-selling artisanal cheesecakes, each one a masterpiece of flavor</p>
+    </div>
+    <div class="product-showcase-single" *ngIf="currentProduct as product">
+      <button class="nav prev" (click)="prev()" aria-label="Previous">&#8592;</button>
+      <div class="product-card product-single">
+        <div class="product-badge" *ngIf="product.badge" [class]="'badge-' + product.badge.toLowerCase().replace(' ', '-')">
+          {{ product.badge }}
+        </div>
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.name" class="product-img">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="product-price">₱{{ product.price | number }}</div>
+          <button class="btn btn-primary product-btn" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+      <button class="nav next" (click)="next()" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="section-actions">
+      <a routerLink="/products" class="btn btn-secondary">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-description">Real stories from cheesecake lovers who can't get enough</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-rating">
+          <span class="star" *ngFor="let star of [1,2,3,4,5]">★</span>
+        </div>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <h4 class="author-name">{{ testimonial.name }}</h4>
+            <p class="author-location">{{ testimonial.location }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Satisfy Your Sweet Cravings?</h2>
+      <p class="cta-description">
+        Join thousands of dessert lovers who have discovered the perfect blend of creamy richness and golden crust.
+      </p>
+      <div class="cta-actions">
+        <a routerLink="/products" class="btn btn-primary">Start Shopping</a>
+        <a routerLink="/about" class="btn btn-secondary">Our Story</a>
+      </div>
+    </div>
+  </div>
+</section>

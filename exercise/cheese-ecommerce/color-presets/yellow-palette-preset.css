@@ -1,0 +1,40 @@
+/* Pastel Yellow Color Palette Preset */
+/* Save this preset to restore the pastel yellow color scheme */
+
+:root {
+  /* Pastel Yellow Color Palette */
+  --primary-yellow: #FFD54F;
+  --secondary-yellow: #FFECB3;
+  --light-yellow: #FFFDE7;
+  --dark-yellow: #F9A825;
+  --accent-yellow: #FFE082;
+  --soft-yellow: #FFF9C4;
+  --cream-yellow: #FFF59D;
+  
+  /* Legacy variable names for backward compatibility */
+  --primary-pink: #FFD54F;
+  --secondary-pink: #FFECB3;
+  --light-pink: #FFFDE7;
+  --dark-pink: #F9A825;
+  --accent-pink: #FFE082;
+  --soft-pink: #FFF9C4;
+  --rose-pink: #FFF59D;
+  
+  /* Gradients */
+  --yellow-gradient: linear-gradient(135deg, #FFD54F, #FFECB3);
+  --pink-gradient: linear-gradient(135deg, #FFD54F, #FFECB3);
+  --soft-gradient: linear-gradient(135deg, #FFFDE7, #FFF9C4);
+  
+  /* Shadows */
+  --shadow-yellow: 0 4px 14px 0 rgba(255, 213, 79, 0.2);
+  --shadow-pink: 0 4px 14px 0 rgba(255, 213, 79, 0.2);
+}
+
+/* Button hover effects */
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(255, 213, 79, 0.3);
+}
+
+/* Form input focus shadows */
+/* Use: rgba(255, 213, 79, 0.1) */
+

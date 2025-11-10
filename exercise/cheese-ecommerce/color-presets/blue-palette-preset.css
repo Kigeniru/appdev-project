@@ -1,0 +1,40 @@
+/* Blue Color Palette Preset */
+/* Save this preset to restore the blue color scheme */
+
+:root {
+  /* Blue Color Palette */
+  --primary-blue: #2196F3;
+  --secondary-blue: #90CAF9;
+  --light-blue: #E3F2FD;
+  --dark-blue: #1976D2;
+  --accent-blue: #42A5F5;
+  --soft-blue: #BBDEFB;
+  --sky-blue: #64B5F6;
+  
+  /* Legacy variable names for backward compatibility */
+  --primary-pink: #2196F3;
+  --secondary-pink: #90CAF9;
+  --light-pink: #E3F2FD;
+  --dark-pink: #1976D2;
+  --accent-pink: #42A5F5;
+  --soft-pink: #BBDEFB;
+  --rose-pink: #64B5F6;
+  
+  /* Gradients */
+  --blue-gradient: linear-gradient(135deg, #2196F3, #90CAF9);
+  --pink-gradient: linear-gradient(135deg, #2196F3, #90CAF9);
+  --soft-gradient: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+  
+  /* Shadows */
+  --shadow-blue: 0 4px 14px 0 rgba(33, 150, 243, 0.2);
+  --shadow-pink: 0 4px 14px 0 rgba(33, 150, 243, 0.2);
+}
+
+/* Button hover effects */
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+}
+
+/* Form input focus shadows */
+/* Use: rgba(33, 150, 243, 0.1) */
+
