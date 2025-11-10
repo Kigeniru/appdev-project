@@ -26,8 +26,20 @@ out-tsc/
 .angular/
 
 # IDE - IntelliJ IDEA
-.idea/
-*.iml
+# Include .idea/ for project configuration, but exclude user-specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/shelf/
+# Allow .idea config files (modules.xml, compiler.xml, etc.)
+!.idea/*.xml
+!.idea/*.iml
+!.idea/encodings.xml
+!.idea/misc.xml
+!.idea/vcs.xml
+!.idea/jarRepositories.xml
+!.idea/compiler.xml
+# Exclude other IDE files
 *.iws
 *.ipr
 
